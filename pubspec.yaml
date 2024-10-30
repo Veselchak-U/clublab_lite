@@ -1,5 +1,5 @@
 name: clublab_lite
-description: "ClubLab-lite mobile project."
+description: "ClubLab lite mobile project."
 publish_to: 'none'
 
 version: 0.0.1+1
@@ -26,6 +26,10 @@ dev_dependencies:
   # Linter
   flutter_lints: 4.0.0
   dart_code_metrics_presets: 2.16.0
+
+  # Usage: dart run rename setAppName --targets ios,android --value "ClubLab lite"
+  # Usage: dart run rename setBundleId --targets ios,android --value "biz.lite.clublab"
+  rename: 3.0.2
 
 flutter:
   generate: true

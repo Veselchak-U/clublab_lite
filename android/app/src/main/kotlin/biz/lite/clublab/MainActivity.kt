@@ -1,4 +1,4 @@
-package biz.lite.clublab.clublab_lite
+package biz.lite.clublab
 
 import io.flutter.embedding.android.FlutterActivity
 
