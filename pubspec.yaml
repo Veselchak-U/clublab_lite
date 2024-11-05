@@ -1,5 +1,5 @@
 name: clublab_lite
-description: "ClubLab lite mobile project."
+description: "ClubLab-lite mobile project."
 publish_to: 'none'
 
 version: 0.0.1+1
@@ -16,8 +16,24 @@ dependencies:
     sdk: flutter
   intl:
 
+  # Core
+  get_it: 8.0.2
+  provider: 6.1.2
+  go_router: 14.4.1
+
+  # State management
+  control: 0.2.0
+
   # UI
   cupertino_icons: 1.0.8
+  flutter_screenutil: 5.9.3
+
+  # Utils
+  logger: 2.4.0
+  path_provider:
+  path:
+  share_plus: 10.0.2
+  collection:
 
   # Code generation
   json_annotation: 4.9.0
