@@ -8,6 +8,7 @@ import 'package:clublab_lite/app/service/logger/logger_service.dart';
 import 'package:clublab_lite/app/service/logger/observer/state_controller_observer.dart';
 import 'package:clublab_lite/app/style/app_theme.dart';
 import 'package:clublab_lite/config.dart';
+import 'package:clublab_lite/features/initial/data/repository/user_repository.dart';
 import 'package:control/control.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -74,8 +75,8 @@ Future<void> _initializeApp() async {
 
   Controller.observer = StateControllerObserver();
 
-  // final savedLocale = await DI.get<UserRepository>().getLocale();
+  final savedLocale = await DI.get<UserRepository>().getLocale();
   runApp(
-    App(null /*savedLocale*/),
+    App(savedLocale),
   );
 }

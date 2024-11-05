@@ -41,6 +41,6 @@ class ConvertDateTime implements JsonConverter<DateTime?, String?> {
   String? toJson(DateTime? value) {
     if (value == null) return null;
 
-    return DateFormat('dd.MM.yyyy').format(value);
+    return DateFormat('yyyy-MM-dd').format(value);
   }
 }

@@ -172,6 +172,18 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'שדה חובה: {name}'**
   String field_required(String name);
+
+  /// No description provided for @male.
+  ///
+  /// In he, this message translates to:
+  /// **'זכר'**
+  String get male;
+
+  /// No description provided for @female.
+  ///
+  /// In he, this message translates to:
+  /// **'נקבה'**
+  String get female;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

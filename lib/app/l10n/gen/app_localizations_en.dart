@@ -48,4 +48,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String field_required(String name) {
     return 'This field is required: $name';
   }
+
+  @override
+  String get male => 'Male';
+
+  @override
+  String get female => 'Female';
 }

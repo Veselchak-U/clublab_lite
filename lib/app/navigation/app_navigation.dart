@@ -7,8 +7,17 @@ import 'package:clublab_lite/app/navigation/app_route.dart';
 import 'package:clublab_lite/app/navigation/navigation_error_screen.dart';
 import 'package:clublab_lite/app/service/logger/logger_service.dart';
 import 'package:clublab_lite/common/overlays/app_overlays.dart';
+import 'package:clublab_lite/features/auth/presentation/login/login_screen.dart';
+import 'package:clublab_lite/features/auth/presentation/login/login_screen_vm.dart';
+import 'package:clublab_lite/features/home/presentation/home_screen.dart';
+import 'package:clublab_lite/features/home/presentation/home_screen_vm.dart';
+import 'package:clublab_lite/features/initial/data/repository/user_repository.dart';
+import 'package:clublab_lite/features/initial/domain/logic/initial_controller.dart';
+import 'package:clublab_lite/features/initial/presentation/initial_screen.dart';
+import 'package:clublab_lite/features/initial/presentation/initial_screen_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 class AppNavigation {
   static final _allowingWithoutAuthorization = [
@@ -21,11 +30,9 @@ class AppNavigation {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 
   static Future<bool> _isUnauthorizedUser() async {
-    // final token = await DI.get<UserRepository>().getAccessToken();
-    //
-    // return token == null;
+    final token = await DI.get<UserRepository>().getAccessToken();
 
-    return true;
+    return token == null;
   }
 
   static void goToScreen({required String name}) {
@@ -50,21 +57,34 @@ class AppNavigation {
       return NavigationErrorScreen(state.error);
     },
     routes: [
-      // GoRoute(
-      //   name: AppRoute.initial.name,
-      //   path: AppRoute.initial.path,
-      //   pageBuilder: (context, state) => NoTransitionPage(
-      //     child: Provider(
-      //       lazy: false,
-      //       create: (context) => InitialScreenVm(
-      //         context,
-      //         DI.get<InitialController>(),
-      //       ),
-      //       dispose: (context, vm) => vm.dispose(),
-      //       child: const InitialScreen(),
-      //     ),
-      //   ),
-      // ),
+      GoRoute(
+        name: AppRoute.initial.name,
+        path: AppRoute.initial.path,
+        pageBuilder: (context, state) => NoTransitionPage(
+          child: Provider(
+            lazy: false,
+            create: (context) => InitialScreenVm(
+              context,
+              DI.get<InitialController>(),
+            ),
+            dispose: (context, vm) => vm.dispose(),
+            child: const InitialScreen(),
+          ),
+        ),
+      ),
+      GoRoute(
+        name: AppRoute.login.name,
+        path: AppRoute.login.path,
+        builder: (context, state) => Provider(
+          lazy: false,
+          create: (context) => LoginScreenVm(
+            context,
+            // DI.get<AuthRepository>(),
+          ),
+          dispose: (context, vm) => vm.dispose(),
+          child: const LoginScreen(),
+        ),
+      ),
       // GoRoute(
       //   name: AppRoute.signUp.name,
       //   path: AppRoute.signUp.path,
@@ -93,19 +113,18 @@ class AppNavigation {
       //     child: const VerifyPhoneScreen(),
       //   ),
       // ),
-      // GoRoute(
-      //   name: AppRoute.login.name,
-      //   path: AppRoute.login.path,
-      //   builder: (context, state) => Provider(
-      //     lazy: false,
-      //     create: (context) => LoginScreenVm(
-      //       context,
-      //       DI.get<AuthRepository>(),
-      //     ),
-      //     dispose: (context, vm) => vm.dispose(),
-      //     child: const LoginScreen(),
-      //   ),
-      // ),
+      GoRoute(
+        name: AppRoute.home.name,
+        path: AppRoute.home.path,
+        builder: (context, state) => Provider(
+          lazy: false,
+          create: (context) => HomeScreenVm(
+            context,
+          ),
+          dispose: (context, vm) => vm.dispose(),
+          child: const HomeScreen(),
+        ),
+      ),
     ],
   );
 

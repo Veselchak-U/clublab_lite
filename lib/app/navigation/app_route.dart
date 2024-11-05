@@ -6,6 +6,8 @@ class AppRoute {
   static const verifyPhone = AppRoute('verifyPhone', '/verifyPhone');
   static const login = AppRoute('login', '/login');
 
+  static const home = AppRoute('home', '/home');
+
   final String name;
   final String path;
 

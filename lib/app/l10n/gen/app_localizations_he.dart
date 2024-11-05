@@ -48,4 +48,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String field_required(String name) {
     return 'שדה חובה: $name';
   }
+
+  @override
+  String get male => 'זכר';
+
+  @override
+  String get female => 'נקבה';
 }
