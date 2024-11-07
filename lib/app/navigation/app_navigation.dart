@@ -7,8 +7,14 @@ import 'package:clublab_lite/app/navigation/app_route.dart';
 import 'package:clublab_lite/app/navigation/navigation_error_screen.dart';
 import 'package:clublab_lite/app/service/logger/logger_service.dart';
 import 'package:clublab_lite/common/overlays/app_overlays.dart';
+import 'package:clublab_lite/features/auth/data/repository/auth_repository.dart';
 import 'package:clublab_lite/features/auth/presentation/login/login_screen.dart';
 import 'package:clublab_lite/features/auth/presentation/login/login_screen_vm.dart';
+import 'package:clublab_lite/features/auth/presentation/sign_up/sign_up_screen.dart';
+import 'package:clublab_lite/features/auth/presentation/sign_up/sign_up_screen_vm.dart';
+import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen.dart';
+import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_params.dart';
+import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_vm.dart';
 import 'package:clublab_lite/features/home/presentation/home_screen.dart';
 import 'package:clublab_lite/features/home/presentation/home_screen_vm.dart';
 import 'package:clublab_lite/features/initial/data/repository/user_repository.dart';
@@ -79,40 +85,40 @@ class AppNavigation {
           lazy: false,
           create: (context) => LoginScreenVm(
             context,
-            // DI.get<AuthRepository>(),
+            DI.get<AuthRepository>(),
           ),
           dispose: (context, vm) => vm.dispose(),
           child: const LoginScreen(),
         ),
       ),
-      // GoRoute(
-      //   name: AppRoute.signUp.name,
-      //   path: AppRoute.signUp.path,
-      //   builder: (context, state) => Provider(
-      //     lazy: false,
-      //     create: (context) => SignUpScreenVm(
-      //       context,
-      //       DI.get<AuthRepository>(),
-      //     ),
-      //     dispose: (context, vm) => vm.dispose(),
-      //     child: const SignUpScreen(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   name: AppRoute.verifyPhone.name,
-      //   path: AppRoute.verifyPhone.path,
-      //   builder: (context, state) => Provider(
-      //     lazy: false,
-      //     create: (context) => VerifyPhoneScreenVm(
-      //       context,
-      //       DI.get<AuthRepository>(),
-      //       DI.get<UserRepository>(),
-      //       params: state.extra as VerifyPhoneScreenParams,
-      //     ),
-      //     dispose: (context, vm) => vm.dispose(),
-      //     child: const VerifyPhoneScreen(),
-      //   ),
-      // ),
+      GoRoute(
+        name: AppRoute.signUp.name,
+        path: AppRoute.signUp.path,
+        builder: (context, state) => Provider(
+          lazy: false,
+          create: (context) => SignUpScreenVm(
+            context,
+            DI.get<AuthRepository>(),
+          ),
+          dispose: (context, vm) => vm.dispose(),
+          child: const SignUpScreen(),
+        ),
+      ),
+      GoRoute(
+        name: AppRoute.verifyPhone.name,
+        path: AppRoute.verifyPhone.path,
+        builder: (context, state) => Provider(
+          lazy: false,
+          create: (context) => VerifyPhoneScreenVm(
+            context,
+            DI.get<AuthRepository>(),
+            DI.get<UserRepository>(),
+            params: state.extra as VerifyPhoneScreenParams,
+          ),
+          dispose: (context, vm) => vm.dispose(),
+          child: const VerifyPhoneScreen(),
+        ),
+      ),
       GoRoute(
         name: AppRoute.home.name,
         path: AppRoute.home.path,

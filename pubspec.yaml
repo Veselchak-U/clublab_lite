@@ -31,6 +31,8 @@ dependencies:
   # UI
   cupertino_icons: 1.0.8
   flutter_screenutil: 5.9.3
+  mask_text_input_formatter: 2.9.0
+  flutter_svg: 2.0.13
 
   # Utils
   logger: 2.4.0
