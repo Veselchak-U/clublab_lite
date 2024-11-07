@@ -33,5 +33,8 @@
   "singUpChoose": "הירשם כאן",
   "requiredFieldError": "שדה חובה",
   "phoneRequires": "הטלפון לא חוקי",
-  "mobileNumber": "מספר טלפון נייד"
+  "mobileNumber": "מספר טלפון נייד",
+  "enterCodeTitle": "הזן את הקוד",
+  "verificationCode": "קוד אימות",
+  "resendCode": "שלח קוד שוב"
 }

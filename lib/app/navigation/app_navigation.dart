@@ -112,7 +112,6 @@ class AppNavigation {
           create: (context) => VerifyPhoneScreenVm(
             context,
             DI.get<AuthRepository>(),
-            DI.get<UserRepository>(),
             params: state.extra as VerifyPhoneScreenParams,
           ),
           dispose: (context, vm) => vm.dispose(),

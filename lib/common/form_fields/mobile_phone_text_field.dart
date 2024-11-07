@@ -32,6 +32,7 @@ class MobilePhoneTextField extends StatefulWidget {
   final String? description;
   final bool loading;
   final bool isRequired;
+  final String? phonePrefix;
 
   const MobilePhoneTextField({
     this.label,
@@ -56,6 +57,7 @@ class MobilePhoneTextField extends StatefulWidget {
     this.description,
     this.loading = false,
     this.isRequired = true,
+    this.phonePrefix,
     super.key,
   });
 
@@ -177,7 +179,7 @@ class _MobilePhoneTextFieldState extends State<MobilePhoneTextField> {
                               children: [
                                 SizedBox(width: max(24, 24.r)),
                                 Text(
-                                  '+972  ',
+                                  widget.phonePrefix ?? '',
                                   style: AppTextStyles.s14w400,
                                 ),
                                 Expanded(

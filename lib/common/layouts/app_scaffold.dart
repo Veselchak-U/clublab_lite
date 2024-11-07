@@ -26,6 +26,7 @@ class AppScaffold extends StatelessWidget {
       child: ColoredBox(
         color: backgroundColor,
         child: SafeArea(
+          top: false,
           child: Scaffold(
             backgroundColor: backgroundColor,
             resizeToAvoidBottomInset: resizeToAvoidBottomInset,

@@ -14,6 +14,7 @@ class UserApiModel {
   final String? birthDate;
   @SexTypeConverter()
   final SexType? gender;
+  final String? token;
 
   UserApiModel({
     required this.id,
@@ -22,6 +23,7 @@ class UserApiModel {
     this.email,
     this.birthDate,
     this.gender,
+    this.token,
   });
 
   factory UserApiModel.fromJson(Map<String, dynamic> json) {

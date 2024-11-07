@@ -18,6 +18,7 @@ class AppTheme {
       onSurface: AppColors.text,
     ),
     primaryColor: AppColors.primary,
+    // appBarTheme: _appBarThemeLight,
     navigationBarTheme: _navigationBarThemeLight,
     textButtonTheme: _textButtonThemeLight,
     dividerTheme: _dividerThemeLight,
@@ -31,6 +32,14 @@ class AppTheme {
     systemNavigationBarColor: Colors.transparent,
     systemNavigationBarIconBrightness: Brightness.dark,
   );
+
+  // static final _appBarThemeLight = AppBarTheme(
+  //   backgroundColor: AppColors.primary,
+  //   iconTheme: const IconThemeData(color: AppColors.white),
+  //   titleTextStyle: AppTextStyles.s14w500.copyWith(
+  //     color: AppColors.primaryWhite,
+  //   ),
+  // );
 
   static const _navigationBarThemeLight = NavigationBarThemeData(
     backgroundColor: Colors.white,

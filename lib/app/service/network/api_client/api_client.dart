@@ -249,13 +249,6 @@ class ApiClient {
       multipartRequest.files.add(f);
     }
 
-    // final firstFile = await files.first.readAsString();
-
-    final firstFile = multipartRequest.files.first;
-    // multipartRequest.fields.addAll({
-    //   "files": firstFile,
-    // });
-
     try {
       final streamedResponse = await _client.send(multipartRequest).timeout(const Duration(seconds: _sendFilesTimeout));
 

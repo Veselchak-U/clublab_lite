@@ -11,18 +11,10 @@ import 'package:clublab_lite/features/auth/presentation/login/login_screen_vm.da
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  final phoneFormatter = MaskTextInputFormatter(mask: '##-###-##-##');
 
   @override
   Widget build(BuildContext context) {
@@ -49,19 +41,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     context.l10n.login,
                     style: AppTextStyles.s30w600,
-                    // textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 12.h),
                   MobilePhoneTextField(
                     label: context.l10n.mobileNumber,
-                    // prefixText: '+972 ',
                     hint: 'XX-XXX-XX-XX',
-                    onChanged: (_) => vm.onPhoneChanged(
-                      phoneFormatter.getUnmaskedText(),
-                    ),
-                    inputFormatters: [phoneFormatter],
+                    phonePrefix: vm.phonePrefix,
+                    inputFormatters: [vm.phoneFormatter],
                     validator: (_) => InputValidators.complexValidator(
-                      phoneFormatter.getUnmaskedText(),
+                      vm.phoneFormatter.getUnmaskedText(),
                       [
                         InputValidators.emptyValidator,
                         InputValidators.mobilePhoneValidator,

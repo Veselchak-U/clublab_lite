@@ -67,6 +67,7 @@ class DI {
         ));
     _sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(
           _sl<AuthDatasource>(),
+          _sl<UserLocalDatasource>(),
         ));
   }
 

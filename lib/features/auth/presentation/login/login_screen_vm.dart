@@ -5,6 +5,7 @@ import 'package:clublab_lite/features/auth/data/repository/auth_repository.dart'
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_params.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class LoginScreenVm {
   final BuildContext _context;
@@ -20,16 +21,13 @@ class LoginScreenVm {
   final loading = ValueNotifier<bool>(false);
   final formKey = GlobalKey<FormState>();
 
-  String _phone = '';
+  final phonePrefix = '+972  ';
+  final phoneFormatter = MaskTextInputFormatter(mask: '##-###-##-##');
 
   void _init() {}
 
   void dispose() {
     loading.dispose();
-  }
-
-  void onPhoneChanged(String value) {
-    _phone = value;
   }
 
   void goSignUp() {
@@ -42,13 +40,14 @@ class LoginScreenVm {
 
     _setLoading(true);
     try {
-      await _authRepository.requestOtp(_phone);
+      await _authRepository.requestOtp(phoneFormatter.getUnmaskedText());
 
       if (!_context.mounted) return;
       _context.pushNamed(
         AppRoute.verifyPhone.name,
         extra: VerifyPhoneScreenParams(
-          phone: _phone,
+          phone: phoneFormatter.getUnmaskedText(),
+          fullPhone: phonePrefix + phoneFormatter.getMaskedText(),
         ),
       );
     } on Object catch (e, st) {

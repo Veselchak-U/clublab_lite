@@ -28,13 +28,6 @@ class UserLocalDatasourceImpl implements UserLocalDatasource {
     this._secureStorageService,
   );
 
-  Future<void> _clearOldStorages() {
-    return Future.wait([
-      _storageService.clear(),
-      _secureStorageService.clear(),
-    ]);
-  }
-
   static const _keyAccessToken = 'accessToken';
   static const _keyUser = 'user';
   static const _keyLocale = 'locale';

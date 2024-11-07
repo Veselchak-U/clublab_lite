@@ -220,6 +220,24 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'מספר טלפון נייד'**
   String get mobileNumber;
+
+  /// No description provided for @enterCodeTitle.
+  ///
+  /// In he, this message translates to:
+  /// **'הזן את הקוד'**
+  String get enterCodeTitle;
+
+  /// No description provided for @verificationCode.
+  ///
+  /// In he, this message translates to:
+  /// **'קוד אימות'**
+  String get verificationCode;
+
+  /// No description provided for @resendCode.
+  ///
+  /// In he, this message translates to:
+  /// **'שלח קוד שוב'**
+  String get resendCode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

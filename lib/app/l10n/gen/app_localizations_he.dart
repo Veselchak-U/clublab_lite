@@ -72,4 +72,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get mobileNumber => 'מספר טלפון נייד';
+
+  @override
+  String get enterCodeTitle => 'הזן את הקוד';
+
+  @override
+  String get verificationCode => 'קוד אימות';
+
+  @override
+  String get resendCode => 'שלח קוד שוב';
 }

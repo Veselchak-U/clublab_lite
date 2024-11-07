@@ -72,4 +72,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mobileNumber => 'Mobile number';
+
+  @override
+  String get enterCodeTitle => 'Enter the code we sent you to:';
+
+  @override
+  String get verificationCode => 'Verification code';
+
+  @override
+  String get resendCode => 'Resend code';
 }

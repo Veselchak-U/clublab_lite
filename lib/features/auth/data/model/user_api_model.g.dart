@@ -14,6 +14,7 @@ UserApiModel _$UserApiModelFromJson(Map<String, dynamic> json) => UserApiModel(
       birthDate: json['birth_date'] as String?,
       gender:
           const SexTypeConverter().fromJson((json['gender'] as num?)?.toInt()),
+      token: json['token'] as String?,
     );
 
 Map<String, dynamic> _$UserApiModelToJson(UserApiModel instance) =>
@@ -24,4 +25,5 @@ Map<String, dynamic> _$UserApiModelToJson(UserApiModel instance) =>
       'email': instance.email,
       'birth_date': instance.birthDate,
       'gender': const SexTypeConverter().toJson(instance.gender),
+      'token': instance.token,
     };
