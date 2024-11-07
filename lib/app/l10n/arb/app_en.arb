@@ -27,5 +27,11 @@
     }
   },
   "male": "Male",
-  "female": "Female"
+  "female": "Female",
+  "login": "Login",
+  "notHaveAccount": "Not have an account?",
+  "singUpChoose": "Sign Up Here",
+  "requiredFieldError": "This is a required field",
+  "phoneRequires": "The phone is invalid",
+  "mobileNumber": "Mobile number"
 }

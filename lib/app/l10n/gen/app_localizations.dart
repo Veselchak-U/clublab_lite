@@ -184,6 +184,42 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'נקבה'**
   String get female;
+
+  /// No description provided for @login.
+  ///
+  /// In he, this message translates to:
+  /// **'התחברות'**
+  String get login;
+
+  /// No description provided for @notHaveAccount.
+  ///
+  /// In he, this message translates to:
+  /// **'אין לך חשבון?'**
+  String get notHaveAccount;
+
+  /// No description provided for @singUpChoose.
+  ///
+  /// In he, this message translates to:
+  /// **'הירשם כאן'**
+  String get singUpChoose;
+
+  /// No description provided for @requiredFieldError.
+  ///
+  /// In he, this message translates to:
+  /// **'שדה חובה'**
+  String get requiredFieldError;
+
+  /// No description provided for @phoneRequires.
+  ///
+  /// In he, this message translates to:
+  /// **'הטלפון לא חוקי'**
+  String get phoneRequires;
+
+  /// No description provided for @mobileNumber.
+  ///
+  /// In he, this message translates to:
+  /// **'מספר טלפון נייד'**
+  String get mobileNumber;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

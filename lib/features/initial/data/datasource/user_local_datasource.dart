@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:clublab_lite/app/service/storage/secure_storage_service.dart';
 import 'package:clublab_lite/app/service/storage/storage_service.dart';
-import 'package:clublab_lite/features/initial/data/model/user_api_model.dart';
+import 'package:clublab_lite/features/auth/data/model/user_api_model.dart';
 
 abstract interface class UserLocalDatasource {
   Future<String?> getAccessToken();

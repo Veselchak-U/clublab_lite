@@ -1,7 +1,7 @@
 import 'dart:ui';
 
+import 'package:clublab_lite/features/auth/data/model/user_api_model.dart';
 import 'package:clublab_lite/features/initial/data/datasource/user_local_datasource.dart';
-import 'package:clublab_lite/features/initial/data/model/user_api_model.dart';
 
 abstract interface class UserRepository {
   Future<String?> getAccessToken();

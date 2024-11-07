@@ -54,4 +54,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get female => 'Female';
+
+  @override
+  String get login => 'Login';
+
+  @override
+  String get notHaveAccount => 'Not have an account?';
+
+  @override
+  String get singUpChoose => 'Sign Up Here';
+
+  @override
+  String get requiredFieldError => 'This is a required field';
+
+  @override
+  String get phoneRequires => 'The phone is invalid';
+
+  @override
+  String get mobileNumber => 'Mobile number';
 }

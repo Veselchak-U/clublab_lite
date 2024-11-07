@@ -54,4 +54,22 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get female => 'נקבה';
+
+  @override
+  String get login => 'התחברות';
+
+  @override
+  String get notHaveAccount => 'אין לך חשבון?';
+
+  @override
+  String get singUpChoose => 'הירשם כאן';
+
+  @override
+  String get requiredFieldError => 'שדה חובה';
+
+  @override
+  String get phoneRequires => 'הטלפון לא חוקי';
+
+  @override
+  String get mobileNumber => 'מספר טלפון נייד';
 }

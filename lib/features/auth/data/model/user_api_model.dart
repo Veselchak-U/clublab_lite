@@ -1,5 +1,5 @@
 import 'package:clublab_lite/common/utils/date_time_ext.dart';
-import 'package:clublab_lite/features/initial/data/model/sex_type.dart';
+import 'package:clublab_lite/features/auth/data/model/sex_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'user_api_model.g.dart';

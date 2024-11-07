@@ -27,5 +27,11 @@
     }
   },
   "male": "זכר",
-  "female": "נקבה"
+  "female": "נקבה",
+  "login": "התחברות",
+  "notHaveAccount": "אין לך חשבון?",
+  "singUpChoose": "הירשם כאן",
+  "requiredFieldError": "שדה חובה",
+  "phoneRequires": "הטלפון לא חוקי",
+  "mobileNumber": "מספר טלפון נייד"
 }
