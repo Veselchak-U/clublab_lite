@@ -44,6 +44,7 @@ dependencies:
   path:
   share_plus: 10.0.2
   collection:
+  url_launcher: 6.3.1
 
   # Code generation
   json_annotation: 4.9.0

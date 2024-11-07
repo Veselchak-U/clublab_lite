@@ -238,6 +238,90 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'שלח קוד שוב'**
   String get resendCode;
+
+  /// No description provided for @registration.
+  ///
+  /// In he, this message translates to:
+  /// **'הַרשמה'**
+  String get registration;
+
+  /// No description provided for @fullName.
+  ///
+  /// In he, this message translates to:
+  /// **'שם מלא'**
+  String get fullName;
+
+  /// No description provided for @enterName.
+  ///
+  /// In he, this message translates to:
+  /// **'הזן את שמך'**
+  String get enterName;
+
+  /// No description provided for @phone.
+  ///
+  /// In he, this message translates to:
+  /// **'טלפון'**
+  String get phone;
+
+  /// No description provided for @enterPhone.
+  ///
+  /// In he, this message translates to:
+  /// **'972+'**
+  String get enterPhone;
+
+  /// No description provided for @email.
+  ///
+  /// In he, this message translates to:
+  /// **'אימייל'**
+  String get email;
+
+  /// No description provided for @enterEmail.
+  ///
+  /// In he, this message translates to:
+  /// **'הכנס את האימייל שלך'**
+  String get enterEmail;
+
+  /// No description provided for @mandatoryFields.
+  ///
+  /// In he, this message translates to:
+  /// **'*שדות חובה'**
+  String get mandatoryFields;
+
+  /// No description provided for @haveAccount.
+  ///
+  /// In he, this message translates to:
+  /// **'כבר יש לך חשבון?'**
+  String get haveAccount;
+
+  /// No description provided for @singInChoose.
+  ///
+  /// In he, this message translates to:
+  /// **'היכנס כאן'**
+  String get singInChoose;
+
+  /// No description provided for @termsAndPrivacy_1.
+  ///
+  /// In he, this message translates to:
+  /// **'בלחיצה למטה, אני מאשר שקראתי את Funzone '**
+  String get termsAndPrivacy_1;
+
+  /// No description provided for @termsAndPrivacy_2.
+  ///
+  /// In he, this message translates to:
+  /// **'תנאים והגבלות'**
+  String get termsAndPrivacy_2;
+
+  /// No description provided for @termsAndPrivacy_3.
+  ///
+  /// In he, this message translates to:
+  /// **' ו '**
+  String get termsAndPrivacy_3;
+
+  /// No description provided for @termsAndPrivacy_4.
+  ///
+  /// In he, this message translates to:
+  /// **'מדיניות הפרטיות'**
+  String get termsAndPrivacy_4;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

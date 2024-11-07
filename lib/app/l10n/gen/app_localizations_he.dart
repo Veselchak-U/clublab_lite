@@ -81,4 +81,46 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get resendCode => 'שלח קוד שוב';
+
+  @override
+  String get registration => 'הַרשמה';
+
+  @override
+  String get fullName => 'שם מלא';
+
+  @override
+  String get enterName => 'הזן את שמך';
+
+  @override
+  String get phone => 'טלפון';
+
+  @override
+  String get enterPhone => '972+';
+
+  @override
+  String get email => 'אימייל';
+
+  @override
+  String get enterEmail => 'הכנס את האימייל שלך';
+
+  @override
+  String get mandatoryFields => '*שדות חובה';
+
+  @override
+  String get haveAccount => 'כבר יש לך חשבון?';
+
+  @override
+  String get singInChoose => 'היכנס כאן';
+
+  @override
+  String get termsAndPrivacy_1 => 'בלחיצה למטה, אני מאשר שקראתי את Funzone ';
+
+  @override
+  String get termsAndPrivacy_2 => 'תנאים והגבלות';
+
+  @override
+  String get termsAndPrivacy_3 => ' ו ';
+
+  @override
+  String get termsAndPrivacy_4 => 'מדיניות הפרטיות';
 }

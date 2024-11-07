@@ -36,5 +36,19 @@
   "mobileNumber": "Mobile number",
   "enterCodeTitle": "Enter the code we sent you to:",
   "verificationCode": "Verification code",
-  "resendCode": "Resend code"
+  "resendCode": "Resend code",
+  "registration": "Registration",
+  "fullName": "Full name",
+  "enterName": "Enter your name",
+  "phone": "Phone",
+  "enterPhone": "+972",
+  "email": "Email",
+  "enterEmail": "Enter your email",
+  "mandatoryFields": "*Mandatory fields",
+  "haveAccount": "Already have an account?",
+  "singInChoose": "Login here",
+  "termsAndPrivacy_1": "By clicking below, I confirm that I have read Funzone ",
+  "termsAndPrivacy_2": "Terms & Conditions",
+  "termsAndPrivacy_3": " and ",
+  "termsAndPrivacy_4": "Privacy Policy"
 }

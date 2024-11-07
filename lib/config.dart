@@ -8,6 +8,12 @@ class Config {
   static const appName = 'ClubLab-lite';
   static const isProdBuild = bool.fromEnvironment('PROD_BUILD');
 
+  static String termsOfUseUrl(String languageCode) =>
+      'https://clublab.bitango.co.il/page/termsOfUse?lang=$languageCode';
+
+  static String privacyPolicyUrl(String languageCode) =>
+      'https://clublab.bitango.co.il/page/privacyPolicy?lang=$languageCode';
+
   static late final Env environment;
 
   static late final String? appDocFolder;

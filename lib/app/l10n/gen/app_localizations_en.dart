@@ -81,4 +81,46 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resendCode => 'Resend code';
+
+  @override
+  String get registration => 'Registration';
+
+  @override
+  String get fullName => 'Full name';
+
+  @override
+  String get enterName => 'Enter your name';
+
+  @override
+  String get phone => 'Phone';
+
+  @override
+  String get enterPhone => '+972';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get enterEmail => 'Enter your email';
+
+  @override
+  String get mandatoryFields => '*Mandatory fields';
+
+  @override
+  String get haveAccount => 'Already have an account?';
+
+  @override
+  String get singInChoose => 'Login here';
+
+  @override
+  String get termsAndPrivacy_1 => 'By clicking below, I confirm that I have read Funzone ';
+
+  @override
+  String get termsAndPrivacy_2 => 'Terms & Conditions';
+
+  @override
+  String get termsAndPrivacy_3 => ' and ';
+
+  @override
+  String get termsAndPrivacy_4 => 'Privacy Policy';
 }

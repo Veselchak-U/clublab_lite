@@ -36,5 +36,19 @@
   "mobileNumber": "מספר טלפון נייד",
   "enterCodeTitle": "הזן את הקוד",
   "verificationCode": "קוד אימות",
-  "resendCode": "שלח קוד שוב"
+  "resendCode": "שלח קוד שוב",
+  "registration": "הַרשמה",
+  "fullName": "שם מלא",
+  "enterName": "הזן את שמך",
+  "phone": "טלפון",
+  "enterPhone": "972+",
+  "email": "אימייל",
+  "enterEmail": "הכנס את האימייל שלך",
+  "mandatoryFields": "*שדות חובה",
+  "haveAccount": "כבר יש לך חשבון?",
+  "singInChoose": "היכנס כאן",
+  "termsAndPrivacy_1": "בלחיצה למטה, אני מאשר שקראתי את Funzone ",
+  "termsAndPrivacy_2": "תנאים והגבלות",
+  "termsAndPrivacy_3": " ו ",
+  "termsAndPrivacy_4": "מדיניות הפרטיות"
 }
