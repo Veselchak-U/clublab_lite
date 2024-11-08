@@ -2,6 +2,7 @@ name: clublab_lite
 description: "ClubLab-lite mobile project."
 publish_to: 'none'
 
+
 version: 0.0.1+1
 
 environment:
