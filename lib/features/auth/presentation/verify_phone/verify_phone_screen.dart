@@ -80,9 +80,12 @@ class VerifyPhoneScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 TextButton(
                   onPressed: vm.resendCode,
-                  child: Text(
-                    context.l10n.resendCode,
-                    style: AppTextStyles.s14w500,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8).w,
+                    child: Text(
+                      context.l10n.resendCode,
+                      style: AppTextStyles.s14w500.copyWith(color: AppColors.primary),
+                    ),
                   ),
                 ),
                 SizedBox(height: 32.h),

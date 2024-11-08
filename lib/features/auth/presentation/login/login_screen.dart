@@ -22,83 +22,83 @@ class LoginScreen extends StatelessWidget {
 
     return AppScaffold(
       backgroundColor: AppColors.white,
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: 32.w),
-            child: Form(
-              key: vm.formKey,
-              child: Column(
-                children: [
-                  SizedBox(height: 112.h),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 32).w,
-                    child: Image(
-                      image: AssetImage(Assets.images.loginLogo.path),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            SingleChildScrollView(
+              padding: EdgeInsets.symmetric(horizontal: 32.w),
+              child: Form(
+                key: vm.formKey,
+                child: Column(
+                  children: [
+                    SizedBox(height: 112.h),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 32).w,
+                      child: Image(
+                        image: AssetImage(Assets.images.loginLogo.path),
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 37.h),
-                  Text(
-                    context.l10n.login,
-                    style: AppTextStyles.s30w600,
-                  ),
-                  SizedBox(height: 12.h),
-                  MobilePhoneTextField(
-                    label: context.l10n.mobileNumber,
-                    hint: 'XX-XXX-XX-XX',
-                    phonePrefix: vm.phonePrefix,
-                    inputFormatters: [vm.phoneFormatter],
-                    validator: (_) => InputValidators.complexValidator(
-                      vm.phoneFormatter.getUnmaskedText(),
-                      [
-                        InputValidators.emptyValidator,
-                        InputValidators.mobilePhoneValidator,
-                      ],
+                    SizedBox(height: 37.h),
+                    Text(
+                      context.l10n.login,
+                      style: AppTextStyles.s30w600,
                     ),
-                    keyboardType: TextInputType.number,
-                  ),
-                  SizedBox(height: 24.h),
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '${context.l10n.notHaveAccount} ',
-                          style: AppTextStyles.s12w400,
-                        ),
-                        TextSpan(
-                          text: context.l10n.singUpChoose,
-                          style: AppTextStyles.s12w400.copyWith(color: AppColors.primary),
-                          recognizer: TapGestureRecognizer()..onTap = vm.goSignUp,
-                        ),
-                      ],
+                    SizedBox(height: 12.h),
+                    MobilePhoneTextField(
+                      label: context.l10n.mobileNumber,
+                      hint: 'XX-XXX-XX-XX',
+                      phonePrefix: vm.phonePrefix,
+                      inputFormatters: [vm.phoneFormatter],
+                      validator: (_) => InputValidators.complexValidator(
+                        vm.phoneFormatter.getUnmaskedText(),
+                        [
+                          InputValidators.emptyValidator,
+                          InputValidators.mobilePhoneValidator,
+                        ],
+                      ),
+                      keyboardType: TextInputType.number,
                     ),
-                  ),
-                  SizedBox(height: 100.h),
-                  ValueListenableBuilder(
-                    valueListenable: vm.loading,
-                    builder: (context, loading, _) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 40).w,
-                        child: CommonButton(
-                          label: context.l10n.login,
-                          onTap: vm.requestOtp,
-                          loading: loading,
-                        ),
-                      );
-                    },
-                  ),
-                ],
+                    SizedBox(height: 24.h),
+                    Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '${context.l10n.notHaveAccount} ',
+                            style: AppTextStyles.s12w400,
+                          ),
+                          TextSpan(
+                            text: context.l10n.singUpChoose,
+                            style: AppTextStyles.s12w400.copyWith(color: AppColors.primary),
+                            recognizer: TapGestureRecognizer()..onTap = vm.goSignUp,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 100.h),
+                    ValueListenableBuilder(
+                      valueListenable: vm.loading,
+                      builder: (context, loading, _) {
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 40).w,
+                          child: CommonButton(
+                            label: context.l10n.login,
+                            onTap: vm.requestOtp,
+                            loading: loading,
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          SafeArea(
-            child: Positioned(
+            Positioned(
               top: 12.r,
               right: 12.r,
               child: const ChangeLocaleButton(),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

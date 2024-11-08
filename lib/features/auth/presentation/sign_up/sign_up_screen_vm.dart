@@ -75,10 +75,6 @@ class SignUpScreenVm {
         email: email,
       );
 
-      // await showSignUpSuccessDialog(context);
-      // if (!context.mounted) return;
-      // context.read<AuthBloc>().add(const AuthEvent.logout());
-
       if (!_context.mounted) return;
       _context.goNamed(AppRoute.home.name);
     } on Object catch (e, st) {
