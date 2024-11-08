@@ -44,11 +44,12 @@
   "enterPhone": "+972",
   "email": "Email",
   "enterEmail": "Enter your email",
-  "mandatoryFields": "*Mandatory fields",
+  "mandatoryFields": "Mandatory fields",
   "haveAccount": "Already have an account?",
   "singInChoose": "Login here",
   "termsAndPrivacy_1": "By clicking below, I confirm that I have read Funzone ",
   "termsAndPrivacy_2": "Terms & Conditions",
   "termsAndPrivacy_3": " and ",
-  "termsAndPrivacy_4": "Privacy Policy"
+  "termsAndPrivacy_4": "Privacy Policy",
+  "invalid_email_address": "Invalid email address"
 }

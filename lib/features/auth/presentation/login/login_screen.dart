@@ -91,10 +91,12 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            top: 12.r,
-            right: 12.r,
-            child: const ChangeLocaleButton(),
+          SafeArea(
+            child: Positioned(
+              top: 12.r,
+              right: 12.r,
+              child: const ChangeLocaleButton(),
+            ),
           ),
         ],
       ),

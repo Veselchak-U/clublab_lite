@@ -104,7 +104,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get enterEmail => 'הכנס את האימייל שלך';
 
   @override
-  String get mandatoryFields => '*שדות חובה';
+  String get mandatoryFields => 'שדות חובה';
 
   @override
   String get haveAccount => 'כבר יש לך חשבון?';
@@ -123,4 +123,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get termsAndPrivacy_4 => 'מדיניות הפרטיות';
+
+  @override
+  String get invalid_email_address => 'כתובת דואר אלקטרוני לא חוקית';
 }

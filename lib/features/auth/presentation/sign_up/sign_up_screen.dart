@@ -69,14 +69,27 @@ class SignUpScreen extends StatelessWidget {
                   AppTextField(
                     label: context.l10n.email,
                     hint: context.l10n.enterEmail,
-                    validator: InputValidators.emptyValidator,
-                    onChanged: (value) => vm.fullName = value,
+                    validator: InputValidators.emailValidator,
+                    onChanged: (value) => vm.email = value,
                     isRequired: false,
                   ),
                   SizedBox(height: 16.h),
-                  Text(
-                    context.l10n.mandatoryFields,
-                    style: AppTextStyles.s12w400,
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Text.rich(
+                      style: AppTextStyles.s12w400,
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: '*\u{00A0}',
+                            style: AppTextStyles.s14w400.copyWith(color: AppColors.red),
+                          ),
+                          TextSpan(
+                            text: context.l10n.mandatoryFields,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   SizedBox(height: 24.h),
                   Text.rich(
@@ -121,7 +134,6 @@ class SignUpScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 24.h),
-                  SizedBox(height: 100.h),
                   ValueListenableBuilder(
                     valueListenable: vm.loading,
                     builder: (context, loading, _) {
@@ -130,7 +142,7 @@ class SignUpScreen extends StatelessWidget {
                         child: CommonButton(
                           label: context.l10n.registration,
                           onTap: vm.registration,
-                          // loading: loading,
+                          loading: loading,
                         ),
                       );
                     },
@@ -140,10 +152,12 @@ class SignUpScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            top: 12.r,
-            right: 12.r,
-            child: const ChangeLocaleButton(),
+          SafeArea(
+            child: Positioned(
+              top: 12.r,
+              right: 12.r,
+              child: const ChangeLocaleButton(),
+            ),
           ),
         ],
       ),

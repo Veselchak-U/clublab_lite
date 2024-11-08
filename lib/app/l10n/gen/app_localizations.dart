@@ -284,7 +284,7 @@ abstract class AppLocalizations {
   /// No description provided for @mandatoryFields.
   ///
   /// In he, this message translates to:
-  /// **'*שדות חובה'**
+  /// **'שדות חובה'**
   String get mandatoryFields;
 
   /// No description provided for @haveAccount.
@@ -322,6 +322,12 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'מדיניות הפרטיות'**
   String get termsAndPrivacy_4;
+
+  /// No description provided for @invalid_email_address.
+  ///
+  /// In he, this message translates to:
+  /// **'כתובת דואר אלקטרוני לא חוקית'**
+  String get invalid_email_address;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

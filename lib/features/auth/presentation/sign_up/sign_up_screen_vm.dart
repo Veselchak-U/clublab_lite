@@ -28,6 +28,7 @@ class SignUpScreenVm {
   final phoneFormatter = MaskTextInputFormatter(mask: '##-###-##-##');
 
   String fullName = '';
+  String? email;
 
   void _init() {}
 
@@ -54,19 +55,33 @@ class SignUpScreenVm {
   }
 
   Future<void> _openUrl(String url) async {
-    _setLoading(true);
     try {
       await UrlLauncher.launchURL(url);
     } on Object catch (e, st) {
       LoggerService().e(error: e, stackTrace: st);
       _onError('$e');
     }
-    _setLoading(false);
   }
 
   Future<void> registration() async {
+    final validForm = formKey.currentState?.validate();
+    if (validForm == false) return;
+
     _setLoading(true);
-    try {} on Object catch (e, st) {
+    try {
+      await _authRepository.signUp(
+        fullName: fullName,
+        phone: phoneFormatter.getUnmaskedText(),
+        email: email,
+      );
+
+      // await showSignUpSuccessDialog(context);
+      // if (!context.mounted) return;
+      // context.read<AuthBloc>().add(const AuthEvent.logout());
+
+      if (!_context.mounted) return;
+      _context.goNamed(AppRoute.home.name);
+    } on Object catch (e, st) {
       LoggerService().e(error: e, stackTrace: st);
       _onError('$e');
     }

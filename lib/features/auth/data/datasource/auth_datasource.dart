@@ -10,6 +10,12 @@ abstract interface class AuthDatasource {
   Future<void> requestOtp(String phone);
 
   Future<UserApiModel> loginWithOtp(String phone, String code);
+
+  Future<UserApiModel> signUp({
+    required String fullName,
+    required String phone,
+    String? email,
+  });
 }
 
 class AuthDatasourceImpl implements AuthDatasource {
@@ -57,6 +63,46 @@ class AuthDatasourceImpl implements AuthDatasource {
       body: {
         'phone': normalizedPhone,
         'otp': code,
+      },
+      parser: (response) {
+        if (response.body case final Map<String, dynamic> body) {
+          final data = body["data"];
+
+          return UserApiModel.fromJson(data);
+        }
+
+        throw ApiException(response);
+      },
+    );
+  }
+
+  @override
+  Future<UserApiModel> signUp({
+    required String fullName,
+    required String phone,
+    String? email,
+  }) async {
+    await Future.delayed(
+      const Duration(seconds: 2),
+      () {},
+    );
+
+    return UserApiModel(
+      id: -1,
+      name: fullName,
+      phone: phone,
+      email: email,
+      token: 'token',
+    );
+
+    final normalizedPhone = '0${phone.replaceAll('-', '')}';
+
+    return _apiClient.post(
+      Uri.parse('${Config.environment.baseUrl}${ApiEndpoints.registration}'),
+      body: {
+        'full_name': fullName,
+        'phone': phone,
+        'email': email,
       },
       parser: (response) {
         if (response.body case final Map<String, dynamic> body) {

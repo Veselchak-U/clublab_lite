@@ -1,11 +1,16 @@
 import 'package:clublab_lite/features/auth/data/datasource/auth_datasource.dart';
-import 'package:clublab_lite/features/auth/data/model/user_api_model.dart';
 import 'package:clublab_lite/features/initial/data/datasource/user_local_datasource.dart';
 
 abstract interface class AuthRepository {
   Future<void> requestOtp(String phone);
 
-  Future<UserApiModel> loginWithOtp(String phone, String code);
+  Future<void> loginWithOtp(String phone, String code);
+
+  Future<void> signUp({
+    required String fullName,
+    required String phone,
+    required String? email,
+  });
 }
 
 class AuthRepositoryImpl implements AuthRepository {
@@ -23,12 +28,26 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<UserApiModel> loginWithOtp(phone, code) async {
+  Future<void> loginWithOtp(phone, code) async {
     final user = await _authDatasource.loginWithOtp(phone, code);
 
     await _userLocalDatasource.setUser(user);
     await _userLocalDatasource.setAccessToken(user.token);
+  }
 
-    return user;
+  @override
+  Future<void> signUp({
+    required String fullName,
+    required String phone,
+    required String? email,
+  }) async {
+    final user = await _authDatasource.signUp(
+      fullName: fullName,
+      phone: phone,
+      email: email,
+    );
+
+    await _userLocalDatasource.setUser(user);
+    await _userLocalDatasource.setAccessToken(user.token);
   }
 }

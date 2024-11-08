@@ -104,7 +104,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get enterEmail => 'Enter your email';
 
   @override
-  String get mandatoryFields => '*Mandatory fields';
+  String get mandatoryFields => 'Mandatory fields';
 
   @override
   String get haveAccount => 'Already have an account?';
@@ -123,4 +123,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get termsAndPrivacy_4 => 'Privacy Policy';
+
+  @override
+  String get invalid_email_address => 'Invalid email address';
 }

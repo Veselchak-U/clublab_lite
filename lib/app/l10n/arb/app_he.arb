@@ -44,11 +44,12 @@
   "enterPhone": "972+",
   "email": "אימייל",
   "enterEmail": "הכנס את האימייל שלך",
-  "mandatoryFields": "*שדות חובה",
+  "mandatoryFields": "שדות חובה",
   "haveAccount": "כבר יש לך חשבון?",
   "singInChoose": "היכנס כאן",
   "termsAndPrivacy_1": "בלחיצה למטה, אני מאשר שקראתי את Funzone ",
   "termsAndPrivacy_2": "תנאים והגבלות",
   "termsAndPrivacy_3": " ו ",
-  "termsAndPrivacy_4": "מדיניות הפרטיות"
+  "termsAndPrivacy_4": "מדיניות הפרטיות",
+  "invalid_email_address": "כתובת דואר אלקטרוני לא חוקית"
 }
