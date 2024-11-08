@@ -17,6 +17,8 @@ abstract interface class UserLocalDatasource {
   Future<Locale?> getLocale();
 
   Future<void> setLocale(Locale? locale);
+
+  Future<void> logout();
 }
 
 class UserLocalDatasourceImpl implements UserLocalDatasource {
@@ -79,5 +81,10 @@ class UserLocalDatasourceImpl implements UserLocalDatasource {
 
     final languageCode = locale.languageCode;
     await _storageService.setString(_keyLocale, languageCode);
+  }
+
+  @override
+  Future<void> logout() {
+    return _secureStorageService.clear();
   }
 }

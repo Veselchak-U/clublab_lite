@@ -25,16 +25,15 @@ class AppScaffold extends StatelessWidget {
     return FocusLayout(
       child: ColoredBox(
         color: backgroundColor,
-        child: SafeArea(
-          top: false,
-          child: Scaffold(
-            backgroundColor: backgroundColor,
-            resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-            appBar: appBar,
-            drawer: drawer,
-            body: body,
-            bottomNavigationBar: bottomNavigationBar,
+        child: Scaffold(
+          backgroundColor: backgroundColor,
+          resizeToAvoidBottomInset: resizeToAvoidBottomInset,
+          appBar: appBar,
+          drawer: drawer,
+          body: SafeArea(
+            child: body,
           ),
+          bottomNavigationBar: bottomNavigationBar,
         ),
       ),
     );

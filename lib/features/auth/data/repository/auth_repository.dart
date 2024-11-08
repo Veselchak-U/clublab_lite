@@ -11,6 +11,8 @@ abstract interface class AuthRepository {
     required String phone,
     required String? email,
   });
+
+  Future<void> logout();
 }
 
 class AuthRepositoryImpl implements AuthRepository {
@@ -49,5 +51,10 @@ class AuthRepositoryImpl implements AuthRepository {
 
     await _userLocalDatasource.setUser(user);
     await _userLocalDatasource.setAccessToken(user.token);
+  }
+
+  @override
+  Future<void> logout() {
+    return _userLocalDatasource.logout();
   }
 }
