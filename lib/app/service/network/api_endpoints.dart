@@ -6,4 +6,7 @@ class ApiEndpoints {
 
   // Profile
   static const deleteAccount = '/api/v1/member/auth/delete';
+
+  // Game records
+  static const gameRecords = '/api/v1/member/game_records';
 }

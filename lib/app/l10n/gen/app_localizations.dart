@@ -400,6 +400,18 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'האם אתה בטוח שברצונך למחוק את חשבונך?'**
   String get sure_to_delete;
+
+  /// No description provided for @game_records.
+  ///
+  /// In he, this message translates to:
+  /// **'שיאי משחק'**
+  String get game_records;
+
+  /// No description provided for @no_videos.
+  ///
+  /// In he, this message translates to:
+  /// **'נכון לעכשיו אין סרטונים זמינים'**
+  String get no_videos;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -63,5 +63,7 @@
   "no_result_found": "No result found",
   "language": "Language",
   "delete_account": "Delete account",
-  "sure_to_delete": "Are you sure you want to delete your account?"
+  "sure_to_delete": "Are you sure you want to delete your account?",
+  "game_records": "Game records",
+  "no_videos": "There are currently no videos available"
 }

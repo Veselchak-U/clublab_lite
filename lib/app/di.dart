@@ -11,6 +11,8 @@ import 'package:clublab_lite/app/service/storage/secure_storage_service.dart';
 import 'package:clublab_lite/app/service/storage/storage_service.dart';
 import 'package:clublab_lite/features/auth/data/datasource/auth_datasource.dart';
 import 'package:clublab_lite/features/auth/data/repository/auth_repository.dart';
+import 'package:clublab_lite/features/home/data/datasource/game_record_datasource.dart';
+import 'package:clublab_lite/features/home/data/repository/game_record_repository.dart';
 import 'package:clublab_lite/features/initial/data/datasource/user_local_datasource.dart';
 import 'package:clublab_lite/features/initial/data/repository/user_repository.dart';
 import 'package:clublab_lite/features/initial/domain/logic/initial_controller.dart';
@@ -59,6 +61,9 @@ class DI {
     _sl.registerLazySingleton<AuthDatasource>(() => AuthDatasourceImpl(
           _sl<ApiClient>(),
         ));
+    _sl.registerLazySingleton<GameRecordDatasource>(() => GameRecordDatasourceImpl(
+          _sl<ApiClient>(),
+        ));
   }
 
   void _repositories() {
@@ -68,6 +73,9 @@ class DI {
     _sl.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(
           _sl<AuthDatasource>(),
           _sl<UserLocalDatasource>(),
+        ));
+    _sl.registerLazySingleton<GameRecordRepository>(() => GameRecordRepositoryImpl(
+          _sl<GameRecordDatasource>(),
         ));
   }
 

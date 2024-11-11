@@ -13,6 +13,7 @@ import 'package:clublab_lite/features/auth/presentation/login/login_screen_vm.da
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen.dart';
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_params.dart';
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_vm.dart';
+import 'package:clublab_lite/features/home/data/repository/game_record_repository.dart';
 import 'package:clublab_lite/features/home/presentation/home_screen.dart';
 import 'package:clublab_lite/features/home/presentation/home_screen_vm.dart';
 import 'package:clublab_lite/features/initial/data/repository/user_repository.dart';
@@ -126,6 +127,7 @@ class AppNavigation {
           create: (context) => HomeScreenVm(
             context,
             DI.get<AuthRepository>(),
+            DI.get<GameRecordRepository>(),
           ),
           dispose: (context, vm) => vm.dispose(),
           child: const HomeScreen(),

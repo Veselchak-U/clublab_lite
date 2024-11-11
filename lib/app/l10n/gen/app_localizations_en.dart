@@ -162,4 +162,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sure_to_delete => 'Are you sure you want to delete your account?';
+
+  @override
+  String get game_records => 'Game records';
+
+  @override
+  String get no_videos => 'There are currently no videos available';
 }

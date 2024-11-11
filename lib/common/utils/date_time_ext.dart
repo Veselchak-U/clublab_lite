@@ -44,3 +44,21 @@ class ConvertDateTime implements JsonConverter<DateTime?, String?> {
     return DateFormat('yyyy-MM-dd').format(value);
   }
 }
+
+class ConvertDateTimestamp implements JsonConverter<DateTime?, int?> {
+  const ConvertDateTimestamp();
+
+  @override
+  DateTime? fromJson(int? value) {
+    if (value == null) return null;
+
+    return DateTime.fromMillisecondsSinceEpoch(value).toLocal();
+  }
+
+  @override
+  int? toJson(DateTime? value) {
+    if (value == null) return null;
+
+    return value.toUtc().millisecondsSinceEpoch;
+  }
+}

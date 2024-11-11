@@ -162,4 +162,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get sure_to_delete => 'האם אתה בטוח שברצונך למחוק את חשבונך?';
+
+  @override
+  String get game_records => 'שיאי משחק';
+
+  @override
+  String get no_videos => 'נכון לעכשיו אין סרטונים זמינים';
 }
