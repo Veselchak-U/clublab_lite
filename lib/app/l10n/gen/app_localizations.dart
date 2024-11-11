@@ -370,6 +370,24 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'הגדרות'**
   String get settings;
+
+  /// No description provided for @search.
+  ///
+  /// In he, this message translates to:
+  /// **'חיפוש'**
+  String get search;
+
+  /// No description provided for @no_result_found.
+  ///
+  /// In he, this message translates to:
+  /// **'לא נמצאה תוצאה'**
+  String get no_result_found;
+
+  /// No description provided for @language.
+  ///
+  /// In he, this message translates to:
+  /// **'שפה'**
+  String get language;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

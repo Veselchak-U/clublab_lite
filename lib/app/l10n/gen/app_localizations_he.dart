@@ -147,4 +147,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get settings => 'הגדרות';
+
+  @override
+  String get search => 'חיפוש';
+
+  @override
+  String get no_result_found => 'לא נמצאה תוצאה';
+
+  @override
+  String get language => 'שפה';
 }

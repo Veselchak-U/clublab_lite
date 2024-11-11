@@ -23,7 +23,7 @@ class AppDrawer extends StatelessWidget {
           children: [
             SizedBox(height: 24.h),
             Padding(
-              padding: const EdgeInsets.only(left: 32).w,
+              padding: const EdgeInsets.symmetric(horizontal: 32).w,
               child: Image.asset(
                 Assets.images.menuLogo.path,
                 width: 150.w,

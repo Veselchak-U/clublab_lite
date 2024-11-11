@@ -138,6 +138,7 @@ class AppNavigation {
           lazy: false,
           create: (context) => SettingsScreenVm(
             context,
+            DI.get<UserRepository>(),
           ),
           dispose: (context, vm) => vm.dispose(),
           child: const SettingsScreen(),

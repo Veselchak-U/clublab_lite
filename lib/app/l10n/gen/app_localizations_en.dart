@@ -147,4 +147,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings => 'Settings';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get no_result_found => 'No result found';
+
+  @override
+  String get language => 'Language';
 }

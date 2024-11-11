@@ -58,5 +58,8 @@
   "no": "No",
   "sing_out": "Sign out",
   "sure_to_logout": "Are you sure you want to logout?",
-  "settings": "Settings"
+  "settings": "Settings",
+  "search": "Search",
+  "no_result_found": "No result found",
+  "language": "Language"
 }

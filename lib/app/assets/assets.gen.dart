@@ -15,6 +15,14 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/dropdown_closed.svg
+  SvgGenImage get dropdownClosed =>
+      const SvgGenImage('assets/icons/dropdown_closed.svg');
+
+  /// File path: assets/icons/dropdown_expanded.svg
+  SvgGenImage get dropdownExpanded =>
+      const SvgGenImage('assets/icons/dropdown_expanded.svg');
+
   /// File path: assets/icons/logout.svg
   SvgGenImage get logout => const SvgGenImage('assets/icons/logout.svg');
 
@@ -22,7 +30,8 @@ class $AssetsIconsGen {
   SvgGenImage get settings => const SvgGenImage('assets/icons/settings.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [logout, settings];
+  List<SvgGenImage> get values =>
+      [dropdownClosed, dropdownExpanded, logout, settings];
 }
 
 class $AssetsImagesGen {

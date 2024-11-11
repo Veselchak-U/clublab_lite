@@ -58,5 +58,8 @@
   "no": "לא",
   "sing_out": "יציאה",
   "sure_to_logout": "האם אתה בטוח שברצונך לצאת?",
-  "settings": "הגדרות"
+  "settings": "הגדרות",
+  "search": "חיפוש",
+  "no_result_found": "לא נמצאה תוצאה",
+  "language": "שפה"
 }
