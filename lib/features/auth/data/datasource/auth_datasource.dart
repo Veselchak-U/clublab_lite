@@ -16,6 +16,8 @@ abstract interface class AuthDatasource {
     required String phone,
     String? email,
   });
+
+  Future<void> deleteAccount();
 }
 
 class AuthDatasourceImpl implements AuthDatasource {
@@ -110,6 +112,25 @@ class AuthDatasourceImpl implements AuthDatasource {
 
           return UserApiModel.fromJson(data);
         }
+
+        throw ApiException(response);
+      },
+    );
+  }
+
+  @override
+  Future<void> deleteAccount() async {
+    await Future.delayed(
+      const Duration(seconds: 1),
+      () {},
+    );
+
+    return;
+
+    return _apiClient.post(
+      Uri.parse('${Config.environment.baseUrl}${ApiEndpoints.deleteAccount}'),
+      parser: (response) {
+        if (response.statusCode == HttpStatus.ok) return;
 
         throw ApiException(response);
       },

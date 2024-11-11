@@ -2,6 +2,7 @@ import 'package:clublab_lite/app/l10n/gen/app_localizations.dart';
 import 'package:clublab_lite/app/l10n/l10n.dart';
 import 'package:clublab_lite/app/style/app_app_bar.dart';
 import 'package:clublab_lite/app/style/app_colors.dart';
+import 'package:clublab_lite/common/buttons/common_button.dart';
 import 'package:clublab_lite/common/form_fields/app_dropdown_field.dart';
 import 'package:clublab_lite/common/layouts/app_scaffold.dart';
 import 'package:clublab_lite/features/settings/presentation/settings_screen_vm.dart';
@@ -40,7 +41,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return AppScaffold(
       backgroundColor: AppColors.background,
       appBar: AppAppBar(titleText: context.l10n.settings),
-      body: SingleChildScrollView(
+      body: Padding(
         padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 32.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,6 +52,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
               items: supportedLocales,
               isRequired: false,
               onChanged: vm.onLanguageChanged,
+            ),
+            Spacer(),
+            ValueListenableBuilder(
+              valueListenable: vm.loading,
+              builder: (context, loading, _) {
+                return CommonButton(
+                  type: CommonButtonType.danger,
+                  label: context.l10n.delete_account,
+                  onTap: vm.deleteAccount,
+                  loading: loading,
+                );
+              },
             ),
           ],
         ),

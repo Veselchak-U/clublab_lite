@@ -156,4 +156,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get language => 'שפה';
+
+  @override
+  String get delete_account => 'מחק חשבון';
+
+  @override
+  String get sure_to_delete => 'האם אתה בטוח שברצונך למחוק את חשבונך?';
 }

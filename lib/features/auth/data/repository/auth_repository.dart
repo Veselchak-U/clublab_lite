@@ -12,7 +12,9 @@ abstract interface class AuthRepository {
     required String? email,
   });
 
-  Future<void> logout();
+  Future<void> clearUserData();
+
+  Future<void> deleteAccount();
 }
 
 class AuthRepositoryImpl implements AuthRepository {
@@ -54,7 +56,13 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<void> logout() {
-    return _userLocalDatasource.logout();
+  Future<void> clearUserData() {
+    return _userLocalDatasource.clearUserData();
+  }
+
+  @override
+  Future<void> deleteAccount() async {
+    await _authDatasource.deleteAccount();
+    await _userLocalDatasource.clearUserData();
   }
 }

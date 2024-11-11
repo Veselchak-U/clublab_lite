@@ -388,6 +388,18 @@ abstract class AppLocalizations {
   /// In he, this message translates to:
   /// **'שפה'**
   String get language;
+
+  /// No description provided for @delete_account.
+  ///
+  /// In he, this message translates to:
+  /// **'מחק חשבון'**
+  String get delete_account;
+
+  /// No description provided for @sure_to_delete.
+  ///
+  /// In he, this message translates to:
+  /// **'האם אתה בטוח שברצונך למחוק את חשבונך?'**
+  String get sure_to_delete;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

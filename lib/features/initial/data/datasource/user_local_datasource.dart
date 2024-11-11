@@ -18,7 +18,7 @@ abstract interface class UserLocalDatasource {
 
   Future<void> setLocale(Locale? locale);
 
-  Future<void> logout();
+  Future<void> clearUserData();
 }
 
 class UserLocalDatasourceImpl implements UserLocalDatasource {
@@ -84,7 +84,7 @@ class UserLocalDatasourceImpl implements UserLocalDatasource {
   }
 
   @override
-  Future<void> logout() {
+  Future<void> clearUserData() {
     return _secureStorageService.clear();
   }
 }

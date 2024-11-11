@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-enum CommonButtonType { primary, transparent, bordered }
+enum CommonButtonType { primary, transparent, bordered, danger }
 
 class CommonButton extends StatelessWidget {
   final String label;
@@ -49,6 +49,7 @@ class CommonButton extends StatelessWidget {
                 color: AppColors.white,
                 border: Border.all(color: AppColors.green),
               ),
+            CommonButtonType.danger => baseDecoration.copyWith(),
           };
   }
 
@@ -59,6 +60,7 @@ class CommonButton extends StatelessWidget {
             CommonButtonType.primary => AppColors.white,
             CommonButtonType.transparent => AppColors.green,
             CommonButtonType.bordered => AppColors.green,
+            CommonButtonType.danger => Colors.red,
           };
   }
 

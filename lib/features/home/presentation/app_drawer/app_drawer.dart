@@ -30,7 +30,7 @@ class AppDrawer extends StatelessWidget {
                 // height: 50.h,
               ),
             ),
-            SizedBox(height: 24.h),
+            SizedBox(height: 32.h),
             DrawerItem(
               title: context.l10n.settings,
               iconPath: Assets.icons.settings.path,

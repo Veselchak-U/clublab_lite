@@ -61,5 +61,7 @@
   "settings": "Settings",
   "search": "Search",
   "no_result_found": "No result found",
-  "language": "Language"
+  "language": "Language",
+  "delete_account": "Delete account",
+  "sure_to_delete": "Are you sure you want to delete your account?"
 }

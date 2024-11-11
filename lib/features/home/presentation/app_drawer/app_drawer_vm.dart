@@ -32,18 +32,18 @@ class AppDrawerVm {
   }
 
   Future<void> logout() async {
-    final result = await AppDialogs.showConfirmationDialog(
+    final dialogResult = await AppDialogs.showConfirmationDialog(
       context: _context,
       title: _context.l10n.sing_out,
       description: _context.l10n.sure_to_logout,
       confirmLabel: _context.l10n.yes,
       cancelLabel: _context.l10n.no,
     );
-    if (result != true) return;
+    if (dialogResult != true) return;
 
     _setLoading(true);
     try {
-      await _authRepository.logout();
+      await _authRepository.clearUserData();
 
       if (!_context.mounted) return;
       _context.goNamed(AppRoute.login.name);

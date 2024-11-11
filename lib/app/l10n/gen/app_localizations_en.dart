@@ -156,4 +156,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get language => 'Language';
+
+  @override
+  String get delete_account => 'Delete account';
+
+  @override
+  String get sure_to_delete => 'Are you sure you want to delete your account?';
 }
