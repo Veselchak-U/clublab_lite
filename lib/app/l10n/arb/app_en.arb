@@ -51,5 +51,12 @@
   "termsAndPrivacy_2": "Terms & Conditions",
   "termsAndPrivacy_3": " and ",
   "termsAndPrivacy_4": "Privacy Policy",
-  "invalid_email_address": "Invalid email address"
+  "invalid_email_address": "Invalid email address",
+  "ok": "Ok",
+  "cancel": "Cancel",
+  "yes": "Yes",
+  "no": "No",
+  "sing_out": "Sign out",
+  "sure_to_logout": "Are you sure you want to logout?",
+  "settings": "Settings"
 }

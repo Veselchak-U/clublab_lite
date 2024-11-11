@@ -57,22 +57,22 @@ class LoginScreen extends StatelessWidget {
                     ),
                     keyboardType: TextInputType.number,
                   ),
-                  SizedBox(height: 24.h),
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '${context.l10n.notHaveAccount} ',
-                          style: AppTextStyles.s12w400,
-                        ),
-                        TextSpan(
-                          text: context.l10n.singUpChoose,
-                          style: AppTextStyles.s12w400.copyWith(color: AppColors.primary),
-                          recognizer: TapGestureRecognizer()..onTap = vm.goSignUp,
-                        ),
-                      ],
-                    ),
-                  ),
+                  // SizedBox(height: 24.h),
+                  // Text.rich(
+                  //   TextSpan(
+                  //     children: [
+                  //       TextSpan(
+                  //         text: '${context.l10n.notHaveAccount} ',
+                  //         style: AppTextStyles.s12w400,
+                  //       ),
+                  //       TextSpan(
+                  //         text: context.l10n.singUpChoose,
+                  //         style: AppTextStyles.s12w400.copyWith(color: AppColors.primary),
+                  //         recognizer: TapGestureRecognizer()..onTap = vm.goSignUp,
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   SizedBox(height: 100.h),
                   ValueListenableBuilder(
                     valueListenable: vm.loading,

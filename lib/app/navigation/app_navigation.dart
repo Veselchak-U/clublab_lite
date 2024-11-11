@@ -10,8 +10,6 @@ import 'package:clublab_lite/common/overlays/app_overlays.dart';
 import 'package:clublab_lite/features/auth/data/repository/auth_repository.dart';
 import 'package:clublab_lite/features/auth/presentation/login/login_screen.dart';
 import 'package:clublab_lite/features/auth/presentation/login/login_screen_vm.dart';
-import 'package:clublab_lite/features/auth/presentation/sign_up/sign_up_screen.dart';
-import 'package:clublab_lite/features/auth/presentation/sign_up/sign_up_screen_vm.dart';
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen.dart';
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_params.dart';
 import 'package:clublab_lite/features/auth/presentation/verify_phone/verify_phone_screen_vm.dart';
@@ -21,6 +19,8 @@ import 'package:clublab_lite/features/initial/data/repository/user_repository.da
 import 'package:clublab_lite/features/initial/domain/logic/initial_controller.dart';
 import 'package:clublab_lite/features/initial/presentation/initial_screen.dart';
 import 'package:clublab_lite/features/initial/presentation/initial_screen_vm.dart';
+import 'package:clublab_lite/features/settings/presentation/settings_screen.dart';
+import 'package:clublab_lite/features/settings/presentation/settings_screen_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -28,9 +28,9 @@ import 'package:provider/provider.dart';
 class AppNavigation {
   static final _allowingWithoutAuthorization = [
     AppRoute.initial.path,
-    AppRoute.signUp.path,
-    AppRoute.verifyPhone.path,
     AppRoute.login.path,
+    // AppRoute.signUp.path,
+    AppRoute.verifyPhone.path,
   ];
 
   static final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -91,19 +91,19 @@ class AppNavigation {
           child: const LoginScreen(),
         ),
       ),
-      GoRoute(
-        name: AppRoute.signUp.name,
-        path: AppRoute.signUp.path,
-        builder: (context, state) => Provider(
-          lazy: false,
-          create: (context) => SignUpScreenVm(
-            context,
-            DI.get<AuthRepository>(),
-          ),
-          dispose: (context, vm) => vm.dispose(),
-          child: const SignUpScreen(),
-        ),
-      ),
+      // GoRoute(
+      //   name: AppRoute.signUp.name,
+      //   path: AppRoute.signUp.path,
+      //   builder: (context, state) => Provider(
+      //     lazy: false,
+      //     create: (context) => SignUpScreenVm(
+      //       context,
+      //       DI.get<AuthRepository>(),
+      //     ),
+      //     dispose: (context, vm) => vm.dispose(),
+      //     child: const SignUpScreen(),
+      //   ),
+      // ),
       GoRoute(
         name: AppRoute.verifyPhone.name,
         path: AppRoute.verifyPhone.path,
@@ -125,9 +125,22 @@ class AppNavigation {
           lazy: false,
           create: (context) => HomeScreenVm(
             context,
+            DI.get<AuthRepository>(),
           ),
           dispose: (context, vm) => vm.dispose(),
           child: const HomeScreen(),
+        ),
+      ),
+      GoRoute(
+        name: AppRoute.settings.name,
+        path: AppRoute.settings.path,
+        builder: (context, state) => Provider(
+          lazy: false,
+          create: (context) => SettingsScreenVm(
+            context,
+          ),
+          dispose: (context, vm) => vm.dispose(),
+          child: const SettingsScreen(),
         ),
       ),
     ],

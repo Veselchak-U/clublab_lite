@@ -33,7 +33,7 @@ class InputValidators {
     // final emailRegex = RegExp(r"^[a-zA-Z0-9.!#$%&'*+=^`()~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
     final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
-    final valid = emailRegex.hasMatch(value ?? '');
+    final valid = emailRegex.hasMatch(value);
     if (!valid) return l10n?.invalid_email_address ?? '';
 
     return null;

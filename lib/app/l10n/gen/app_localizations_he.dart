@@ -126,4 +126,25 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get invalid_email_address => 'כתובת דואר אלקטרוני לא חוקית';
+
+  @override
+  String get ok => 'בסדר';
+
+  @override
+  String get cancel => 'ביטול';
+
+  @override
+  String get yes => 'כן';
+
+  @override
+  String get no => 'לא';
+
+  @override
+  String get sing_out => 'יציאה';
+
+  @override
+  String get sure_to_logout => 'האם אתה בטוח שברצונך לצאת?';
+
+  @override
+  String get settings => 'הגדרות';
 }

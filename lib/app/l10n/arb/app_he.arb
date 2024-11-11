@@ -51,5 +51,12 @@
   "termsAndPrivacy_2": "תנאים והגבלות",
   "termsAndPrivacy_3": " ו ",
   "termsAndPrivacy_4": "מדיניות הפרטיות",
-  "invalid_email_address": "כתובת דואר אלקטרוני לא חוקית"
+  "invalid_email_address": "כתובת דואר אלקטרוני לא חוקית",
+  "ok": "בסדר",
+  "cancel": "ביטול",
+  "yes": "כן",
+  "no": "לא",
+  "sing_out": "יציאה",
+  "sure_to_logout": "האם אתה בטוח שברצונך לצאת?",
+  "settings": "הגדרות"
 }

@@ -1,14 +1,11 @@
 import 'package:clublab_lite/common/overlays/app_overlays.dart';
-import 'package:clublab_lite/features/auth/data/repository/auth_repository.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreenVm {
+class SettingsScreenVm {
   final BuildContext _context;
-  final AuthRepository authRepository;
 
-  HomeScreenVm(
+  SettingsScreenVm(
     this._context,
-    this.authRepository,
   ) {
     _init();
   }

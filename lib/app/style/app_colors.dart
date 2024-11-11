@@ -15,6 +15,7 @@ class AppColors {
   // static const button =  Color(0xFF03D657); // green
   static const flag = Color(0xFFD93434);
   static const stroke = Color(0xFFE1EBF8);
+  static const divider = Color(0xFF3751CA);
 
   static const green = Color(0xFF03D657);
   static const red = Color(0xFFD60303);
